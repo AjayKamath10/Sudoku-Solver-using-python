@@ -392,4 +392,3 @@ def popup2():
     button_3.grid(row = 1, padx = 20, pady = 20)
             
 makegrid()
-
