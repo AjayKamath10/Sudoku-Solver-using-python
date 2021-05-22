@@ -29,17 +29,17 @@ q = [[0, 0, 0, 0, 0, 0, 0, 0, 0],
 def insert(string):
     global popup, button_insert_0, button_insert_1, button_insert_2, button_insert_3, button_insert_4, button_insert_5, button_insert_6, button_insert_7, button_insert_8, button_insert_9
     popup = Tk()
-    button_insert_0 = Button(popup, text = 'Empty' , command = lambda: assign(string, 0))
-    button_insert_1 = Button(popup, text = 1 , command = lambda: assign(string, 1))
-    button_insert_2 = Button(popup, text = 2 , command = lambda: assign(string, 2))
+    button_insert_0 = Button(popup, text = 'Empty' , command = lambda: user_input(string, 0))
+    button_insert_1 = Button(popup, text = 1 , command = lambda: user_input(string, 1))
+    button_insert_2 = Button(popup, text = 2 , command = lambda: user_input(string, 2))
     
-    button_insert_3 = Button(popup, text = 3 , command = lambda: assign(string, 3))
-    button_insert_4 = Button(popup, text = 4 , command = lambda: assign(string, 4))
-    button_insert_5 = Button(popup, text = 5 , command = lambda: assign(string, 5))
-    button_insert_6 = Button(popup, text = 6 , command = lambda: assign(string, 6))
-    button_insert_7 = Button(popup, text = 7 , command = lambda: assign(string, 7))
-    button_insert_8 = Button(popup, text = 8 , command = lambda: assign(string, 8))
-    button_insert_9 = Button(popup, text = 9 , command = lambda: assign(string, 9))
+    button_insert_3 = Button(popup, text = 3 , command = lambda: user_input(string, 3))
+    button_insert_4 = Button(popup, text = 4 , command = lambda: user_input(string, 4))
+    button_insert_5 = Button(popup, text = 5 , command = lambda: user_input(string, 5))
+    button_insert_6 = Button(popup, text = 6 , command = lambda: user_input(string, 6))
+    button_insert_7 = Button(popup, text = 7 , command = lambda: user_input(string, 7))
+    button_insert_8 = Button(popup, text = 8 , command = lambda: user_input(string, 8))
+    button_insert_9 = Button(popup, text = 9 , command = lambda: user_input(string, 9))
 
     button_insert_0.grid(row = 0, columnspan = 3)
     button_insert_1.grid(row = 1, columnspan = 3)
@@ -52,9 +52,8 @@ def insert(string):
     button_insert_8.grid(row = 8, columnspan = 3)
     button_insert_9.grid(row = 9, columnspan = 3)
        
-def assign(x, num):
+def user_input(x, num):
     x = str(x)
-   
     exec('button' + str(x) + '.config(text = ' + "'" + str(num) + "')")
     q[int(x[0])-1][int(x[1])-1] = int(num)
     for i in [button_insert_0, button_insert_1, button_insert_2, button_insert_3, button_insert_4, button_insert_5, button_insert_6, button_insert_7, button_insert_8, button_insert_9,popup]:
