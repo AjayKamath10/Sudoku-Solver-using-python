@@ -240,7 +240,7 @@ def count():
 
 def algorithm():
     
-    global grid, checked
+    global grid, checked, loop_count
 
     for row in range(1,10):  
         for column in range(1, 10):
@@ -249,6 +249,7 @@ def algorithm():
                     grid.update({'r'+str(row)+'c'+str(column): val})
                     to_be_checked.append('r'+str(row)+'c'+str(column))
     run = 0
+    loop_count = 0
     remove_possibilities()
     
         
